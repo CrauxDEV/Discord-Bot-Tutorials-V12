@@ -13,7 +13,17 @@ First of all let's look towards our requirements.
 Now Let's look towards our main code / index that should be written main. And by this you can host bot.
 So now for that open your code editor and make a new file basically named "index.js" or "main.js", and u should remember all file should be created with ending .js, for example "index.js".
 
+# Index.js codes 
 
+const discord = require('discord.js');
+
+const client = new discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.login('token');
 
 
 
