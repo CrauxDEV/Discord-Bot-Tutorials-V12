@@ -2,6 +2,7 @@
 # Discord-Bot-Tutorials-V12/Replit.com
 In this tutorial I am going to teach u how to make a discord bot using discord.js in https://www.replit.com/signup.
 Basically you have to learn at least javascript variables.
+and u should have a idea what is commenting, anyway // is the comment prefix.......
 
 
 So let's get started.
@@ -55,5 +56,23 @@ const token = process.env.TOKEN;
 Now run the project, and see in your test server your bot will be online .
 
 
+# Start up code with explanation
+Here's the same code with comments, so it's easier to understand what's going on.
+```index.js
+// require the discord.js module
+const discord = require('discord.js');
 
+// create a new Discord client
+const client = new discord.Client();
+
+// when the client is ready, run this code
+// this event will only trigger one time after logging in
+client.once('ready', () => {
+	console.log(`logged in as ${client.user.tag}`);
+});
+
+// login to Discord with your app's token
+client.login('your-token-goes-here');
+```
+Although it's not a lot, it's good to know what each bit of your code does. But, as it currently is, this won't do anything. You probably want to add some commands that run whenever someone sends a specific message, right? Let's get started on that, then!
 
