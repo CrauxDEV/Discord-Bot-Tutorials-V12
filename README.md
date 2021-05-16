@@ -14,6 +14,7 @@ Now Let's look towards our main code / index that should be written main. And by
 So now for that open your code editor and make a new file basically named "index.js" or "main.js", and u should remember all file should be created with ending .js, for example "index.js".
 
 # Index.js codes 
+```index
 
 const discord = require('discord.js');
 
@@ -25,5 +26,5 @@ client.on('ready', () => {
 
 client.login('token');
 
-
+```
 
