@@ -1,31 +1,59 @@
-# Discord-Bot-Tutorials-V12
-It is a short tutorials for beginners who are marking discord bot using Javascript. 
+
+# Discord-Bot-Tutorials-V12/Replit.com
+In this tutorial I am going to teach u how to make a discord bot using discord.js in https://www.replit.com/signup.
+Basically you have to learn at least javascript variables.
+
 
 So let's get started.
 
-First of all let's look towards our requirements.
- - Code editor ( I will recommend vscode)If you have windows 7 then follow alternative. 
- ALTERNATIVE:- You can use "replit.com" for code. And if you are using replit.com for code then u dont need other requirements. 
+First Of all let's make a project in replit.com where we will make bot.
+```
+Step 1 :- Go to Website (https://www.replit.com/)
+Step 2 :- Click on Create New project 
+Step 3 :- Select language (node.js) and Name the Project.
+```
+Then new window will open containing a terminal/console , code editor/IDE, an existing file named index.js
 
- - Node.js/Npm package(It is basically used when u have sublime text 3 like code editor except vscode)
+Note :- Replit.com is a public site . So if u have hacker plan just turn the project private or not having hacker plan then just follow the code and instructions ( It is compulsory to all who have having hacker plan and not having hacker plan all will follow the instructions)
 
+# Some of the things that should be remembered by You while making bot on replit.com
+1.`Token` :- If you don't know what is the use of token then read this properly, 
+         So, token is used to host the bot online and it is very important.  One can control your bot using this token. So I suggest you to hide token in repl.it websites while putting or your bot token will be stole by other users on repl.it and can control your bot.
 
-Now Let's look towards our main code / index that should be written main. And by this you can host bot.
-So now for that open your code editor and make a new file basically named "index.js" or "main.js", and u should remember all file should be created with ending .js, for example "index.js".
-
-# Index.js 
-These are the main codes that should be putted in the main file(index.js/main.js)
+# Basic / main codes for hosting our bot online
+Now open index.js file, there type the following codes.
 ```index.js
-
-const discord = require('discord.js');
-
+//here we declare client and connect the project to discord.js
+const discord = require("discord.js")
 const client = new discord.Client();
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+//now we will host the client/ bot
 
-client.login('token');
+client.once('ready',() => {
+  console.log(`logged in as ${client.user.tag}`)//here when you run the project you will see the bot tag in console 
+)};
 
+client.login("put your bot token here");
 ```
+If you dont know how to gain token search on yt.
+
+# Hiding our bot token
+Dont put your token directly on `client.login("token");`
+First we will make a private file where we will store bot token with a variable name then we will declare that variable name in index.js.
+
+For that click on lock symbol on the left side of ur files. There just Name the variable as TOKEN and put the bot token in value and click add new secret.
+Then our bot token is saved and hided to the variable named "TOKEN".
+Now we will put the code to index.js and we will put that variable in client.login.
+For that just follow the step;
+
+```index.js
+//just add this code to index.js just below the `const client = new discord.Client();`
+const token = process.env.TOKEN;
+
+//at last just replace client.login to `client.login(token);
+```
+Now run the project, and see in your test server your bot will be online .
+
+
+
 
