@@ -1,4 +1,6 @@
 
+![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
+
 # Discord-Bot-Tutorials-V12/Replit.com
 In this tutorial I am going to teach u how to make a discord bot using discord.js in https://www.replit.com/signup.
 Basically you have to learn at least javascript variables.
