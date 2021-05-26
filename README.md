@@ -92,3 +92,36 @@ client.user.setActivity({name: "put here status here", type: "put ur type"});
 ```index.js
 client.user.setPresence({activity: {name: "",type: ""},status: "idle"});
 ```
+
+# Handlers
+Before Making Handler, let's discuss about type of handlers
+Basically as my knowledge there are 2 main Handlers
+       
+  `Command Handlers` :- It will handle the commands and aliases 
+  `Event Handlers` :- It will handle messages/texts 
+
+# Now here I am gonna tell u how to make Command handler?
+ 
+For making Command handler there are 2 methods , u can choose 1 method only not 2.
+
+`1st method` :- in the 1st method we will make the handler on main file I.e `index.js`.
+Write the following codes just below `const client = new discord.Client();`
+
+```index.js
+client.commands = new discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+	// set a new item in the Collection
+	// with the key as the command name and the value as the exported module
+	client.commands.set(command.name, command);
+}
+```
+
+`2nd Method`
+
+
+
+
