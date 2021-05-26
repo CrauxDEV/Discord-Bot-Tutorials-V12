@@ -2,7 +2,7 @@
 ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 
 # Discord-Bot-Tutorials-V12/Replit.com
-In this tutorial I am going to teach u how to make a discord bot using discord.js in https://www.replit.com/signup.
+In this tutorial I am going to teach u how to make a discord bot using discord.js in https://www.replit.com/~.
 Basically you have to learn at least javascript variables.
 and u should have a idea what is commenting, anyway // is the comment prefix.......
 
@@ -78,3 +78,17 @@ client.login('your-token-goes-here');
 ```
 Although it's not a lot, it's good to know what each bit of your code does. But, as it currently is, this won't do anything. You probably want to add some commands that run whenever someone sends a specific message, right? Let's get started on that, then!
 
+# Adding Status of the bot
+Now after hosting and writing the simple startup code we should head towards the status. 
+For that we have 2 methods to add;
+
+`1st Method`
+
+```index.js
+client.user.setActivity({name: "put here status here", type: "put ur type"});
+```
+
+`2nd Method`
+```index.js
+client.user.setPresence({activity: {name: "",type: ""},status: "idle"});
+```
